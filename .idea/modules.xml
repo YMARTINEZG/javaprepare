@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/concurrency/concurrency.iml" filepath="$PROJECT_DIR$/concurrency/concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaprepare.iml" filepath="$PROJECT_DIR$/javaprepare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lambda/lambda.iml" filepath="$PROJECT_DIR$/lambda/lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservices/microservices.iml" filepath="$PROJECT_DIR$/microservices/microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patterns/patterns.iml" filepath="$PROJECT_DIR$/patterns/patterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recursion/recursion.iml" filepath="$PROJECT_DIR$/recursion/recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/structured/structured.iml" filepath="$PROJECT_DIR$/structured/structured.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unstructured/unstructured.iml" filepath="$PROJECT_DIR$/unstructured/unstructured.iml" />
+    </modules>
+  </component>
+</project>
