@@ -3,7 +3,7 @@ package com.sigom.LinkedList;
 public interface IList {
     Object getItem(int i);
 
-    void addItem(Object item);
+    void addItem(Integer item);
     /*
      * adds the specified item at position i in the list, shifting the
      * items that are currently in positions i, i+1, i+2, etc. to the
@@ -25,5 +25,6 @@ public interface IList {
     /* returns true if the list is full, and false otherwise */
     boolean isFull();
 
-
+    void printList();
+    void reverseList();
 }

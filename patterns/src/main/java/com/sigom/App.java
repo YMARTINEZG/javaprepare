@@ -4,6 +4,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Patterns methods" );
+
+        System.out.println("Patterns methods");
     }
 }

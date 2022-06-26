@@ -3,13 +3,13 @@ package com.sigom.Graphs;
 import java.util.*;
 
 
-public class GraphImpl<T> implements IGraph{
+public class GraphImpl implements IGraph{
 
     private Map<String, List<String>> map = new HashMap<>();
 
     @Override
     public void addVertex(String s) {
-       map.put(s, new ArrayList<String>());
+       map.put(s, new ArrayList<>());
     }
 
     @Override
@@ -70,5 +70,65 @@ public class GraphImpl<T> implements IGraph{
             str.append("\n");
         }
         return str.toString();
+    }
+
+    @Override
+    public void buildGraph(String[] employees, String[] relations) {
+        for(String employee: employees){
+            if(!map.containsKey(employee)){
+                addVertex(employee);
+            }
+        }
+        for(String relation: relations){
+           String[] friend = relation.split(",");
+           addEdge(friend[0], friend[1], false);
+        }
+    }
+
+    @Override
+    public List<String> BFS(String node) {
+        List<String> visited = new ArrayList<>();
+        if(!map.containsKey(node)){
+            return visited;
+        }
+
+        Queue<String> queue = new LinkedList<>();
+        queue.add(node);
+        while(!queue.isEmpty()){
+            String val = queue.remove();
+            if(!visited.contains(val)){
+                visited.add(val);
+                map.get(val).forEach(queue::add);
+            }
+        }
+        return visited;
+    }
+
+    @Override
+    public List<String> DFS(String start) {
+       List<String> visited = new ArrayList<>();
+       if(!map.containsKey(start)) return visited;
+       Stack<String> stack = new Stack<>();
+       stack.push(start);
+       while(!stack.isEmpty()){
+           String val = stack.pop();
+           if(!visited.contains(val)){
+               visited.add(val);
+               map.get(val).forEach(stack::push);
+           }
+       }
+       return visited;
+    }
+
+    @Override
+    public void printRelationship() {
+        System.out.println("--- Graph Relation ---");
+        for(String vertex: map.keySet()){
+            System.out.print(vertex + ": ");
+            map.get(vertex).forEach(ele -> {
+                System.out.print(ele + " ");
+            });
+            System.out.println();
+        }
     }
 }

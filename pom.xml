@@ -32,5 +32,6 @@
     <module>unstructured</module>
     <module>lambda</module>
       <module>concurrency</module>
+    <module>kafka</module>
   </modules>
 </project>

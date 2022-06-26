@@ -1,5 +1,7 @@
 package com.sigom;
 
+import com.sigom.Trees.ITree;
+import com.sigom.Trees.TreeImpl;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -35,4 +37,13 @@ public class AppTest
     {
         assertTrue( true );
     }
+
+    public void testTreeNotNull(){
+        ITree t = new TreeImpl();
+        int[] values = new int[]{1,2,3,4,5,6,7};
+        t.insertKeys(values);
+        assertNotNull(t);
+        assertEquals(2, t.findLCA(4, 5).key);
+    }
+
 }

@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "javaType": "com.sigom.types.AdClick",
+  "properties": {
+    "ImpressionID": {
+      "type": "string"
+    },
+    "Campaigner": {
+      "type": "string"
+    }
+  }
+}

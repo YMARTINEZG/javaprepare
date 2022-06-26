@@ -1,10 +1,13 @@
 package com.sigom.LinkedList;
 
 public class ListImpl implements IList{
-    private Node root;
-    private int size;
-
-    public ListImpl(Object[] listData) {
+    Node root;
+    int size;
+    public ListImpl(){
+        root = null;
+        size = 0;
+    }
+    public ListImpl(Integer[] listData) {
         root = new Node(null, null);
         Node current = root;
         for (int j=0; j < listData.length; j++){
@@ -33,12 +36,19 @@ public class ListImpl implements IList{
     }
 
     @Override
-    public void addItem(Object item) {
-        Node current = root;
-        while (current !=null) {
-            current = root.next;
+    public void addItem(Integer item) {
+        if (root == null) {
+            root = new Node(item, null);
+            size++;
+            return;
         }
-        current = new Node(item, null);
+        Node previous = root;
+        Node current = root.next;
+        while (current !=null) {
+            previous = current;
+            current = current.next;
+        }
+        previous.next = new Node(item, null);
         size++;
     }
 
@@ -70,6 +80,35 @@ public class ListImpl implements IList{
     @Override
     public boolean isFull() {
         return false;
+    }
+
+    @Override
+    public void printList() {
+        Node current = root;
+        System.out.println();
+        System.out.print("[");
+        while(current !=null){
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println("]");
+    }
+
+    @Override
+    public void reverseList() {
+        Node newList = null;
+        Node prev = root;
+        while(prev != null){
+            if (newList == null) {
+                newList=new Node(prev.data, null);
+            } else {
+                Node temp = newList;
+                newList = new Node(prev.data, null);
+                newList.next = temp;
+            }
+            prev = prev.next;
+        }
+        root =  newList;
     }
 
 }

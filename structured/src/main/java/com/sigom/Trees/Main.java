@@ -9,6 +9,7 @@ public class Main {
 
         myTree.insertKeys(values);
         myTree.printTree();
+        System.out.println("-----");
 
         int x = -4;
         System.out.println(x>>1);

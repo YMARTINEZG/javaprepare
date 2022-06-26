@@ -2,6 +2,7 @@ package com.sigom.interview;
 
 import com.sigom.interview.TestHelper;
 import com.sigom.model.*;
+import com.sigom.services.SeguroSocialPeru;
 import com.sigom.services.ServiceImplementation;
 import com.sigom.services.TreatmentPlanService;
 import com.sigom.services.TreatmentPlanServiceImpl;
@@ -22,7 +23,8 @@ public class TreatmentPlanServiceTest {
 
     @Before
     public void init(){
-        treatmentPlanService = new ServiceImplementation();
+        //treatmentPlanService = new ServiceImplementation();
+        treatmentPlanService = new SeguroSocialPeru();
         treatmentPlanService.init(TestHelper.diseaseList(), TestHelper.clinics(), TestHelper.medications());
 
         testPatient = new Patient("Butler", "Christopher", LocalDate.of(1993, 5, 10), "5478693", BigDecimal.valueOf(68),

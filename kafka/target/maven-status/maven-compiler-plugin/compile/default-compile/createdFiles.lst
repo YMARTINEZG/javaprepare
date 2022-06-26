@@ -1,0 +1,9 @@
+com/sigom/serde/JsonSerializer.class
+com/sigom/types/CampaingPerformance.class
+com/sigom/types/AdClick.class
+com/sigom/types/AdImpression.class
+com/sigom/serde/AppSerdes$AdClickSerde.class
+com/sigom/serde/AppSerdes.class
+com/sigom/App.class
+com/sigom/serde/JsonDeserializer.class
+com/sigom/serde/AppSerdes$AdImpressionSerde.class

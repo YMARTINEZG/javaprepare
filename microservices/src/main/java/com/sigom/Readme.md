@@ -26,8 +26,8 @@ a single business capability."
 
 1. Circuit Braker.
 
-    - Is the solution for the failure of remote calls or the hang without a response until some timeout limit is reached.
-    - iIprove the fault tolerance and resilience of the ms architecture and also prevent the cascading of failure to other microservices.                                                                      
+    - Is the solution for the failure of remote calls or the hang without a response until some time out limit is reached.
+    - it proved the fault tolerance and resilience of the ms architecture and also prevent the cascading of failure to other microservices.                                                                      
                                                                         
 2. Database per microservices.
 
@@ -37,13 +37,13 @@ a single business capability."
       It is easy to scale.
       The microservice encapsulates the domain's data. 
       Understanding the service and its data as a whole is much easier. 
-    - Shared Database is a anti-pattern, if that is a option consider Monolithic.
+    - Shared Database is a anti-pattern, if that is an option consider Monolithic.
     
 3. Event sourcing.
 
     - This pattern is based in the idea of any change in the entity should be captured by the system.
     - The event sourcing is responsible for giving a new ordered sequence of events.
-    - the application state can be reconstructed by querying the database in offset order. 
+    - the application STATE can be reconstructed by querying the database in offset order. 
     
 4. CQRS.
 
@@ -57,7 +57,7 @@ a single business capability."
     - This is a big improvement in microservice architecture as this allows to isolate the backend of the application from the frontend.
     - Decouple the front-end apps from the backend architecture.
     - This pattern apply for a scenario where mobile app, web app and external apis needs to communicate with the backend services
-      in a microservices architecture.
+      in a micro-services architecture.
     - React, Angular are popular frameworks.
         
 6. API Gateway.
@@ -74,25 +74,35 @@ a single business capability."
     - Often services need to be run in different environments. Environment-specific configuration is required, such as secret keys, 
       database credentials, and so on. Changing the service for each environment has a number of drawbacks. So how we can enable a 
       service to run in multiple environments without modification?
-    - annotations: @EnableConfigServer  
+    - annotations: @EnableConfigServer
+   
+9. Event driven Architecture.
+    - Microservices are an architectural pattern that structures an application as a collection of small, 
+      loosely coupled services that operate together to achieve a common goal. Because they work independently, 
+      they can be added, removed, or upgraded without interfering with other applications.
+    - While there are numerous benefits to microservices architecture, like easier deployment and testing, improved productivity, 
+      flexibility, and scalability, they also pose a few disadvantages, as independently run microservices require a seamless 
+      method of communication to operate as one larger application.
+    - Event-driven microservices allow for real-time micro-services communication, enabling data to be consumed in the form of events 
+      before they’re even requested (Kafka, RabbitMq).
      
-9. Consumer-driven contract tracing.
+11. Consumer-driven contract tracing.
 
-    - 
+     - 
 
-10. Saga.
+12. Saga.
 
      - SAGA is one of the best solutions to keep consistency with data in distributed architecture without 
        having the ACID principles. SAGA is responsible for committing multiple transactions by giving rollback opportunities.
      - 2 types of SAGA ( Choreagraphy & Orchestration).
-     - implementation is dificult , some times is necesary to use Distributed queue brokers.
+     - implementation is difficult , some times is necesary to use Distributed queue brokers.
      
-11. Bulkhead.     
+13. Bulkhead.     
 
 ## REST & SOA
 
-Services Oriented Architecture (SOA) is the unbrella.
-web servcies is a SOA using web-related technologie.REST and its subset RESTful area set of
+Services Oriented Architecture (SOA) is the umbrella.
+web services is a SOA using web-related technologies. REST and its subset RESTful area set of
 practices to implement web services. Finally microservices are a new set of SOA.
 
 SOA : architectures designed with a focus on services

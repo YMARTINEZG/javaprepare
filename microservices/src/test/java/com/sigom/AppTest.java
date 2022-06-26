@@ -1,5 +1,6 @@
 package com.sigom;
 
+import com.sigom.Trees.TreeImpl;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -34,5 +35,10 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
+    }
+
+    public void checkTreeIsNotNull(){
+        TreeImpl t = new TreeImpl();
+        assertNotNull(t);
     }
 }

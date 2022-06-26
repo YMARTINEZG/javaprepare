@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "javaType": "com.sigom.types.CampaingPerformance",
+  "properties": {
+    "Campaigner": {
+      "type": "string"
+    },
+    "AdImpressions": {
+      "javaType": "java.lang.Long"
+    },
+    "AdClicks": {
+      "javaType": "java.lang.Long"
+    }
+  }
+}

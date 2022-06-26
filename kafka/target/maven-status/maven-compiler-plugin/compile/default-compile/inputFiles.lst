@@ -1,0 +1,7 @@
+/Users/yvan/solutions/javaprepare/kafka/src/main/java/com/sigom/types/AdImpression.java
+/Users/yvan/solutions/javaprepare/kafka/src/main/java/com/sigom/App.java
+/Users/yvan/solutions/javaprepare/kafka/src/main/java/com/sigom/types/CampaingPerformance.java
+/Users/yvan/solutions/javaprepare/kafka/src/main/java/com/sigom/serde/JsonSerializer.java
+/Users/yvan/solutions/javaprepare/kafka/src/main/java/com/sigom/serde/JsonDeserializer.java
+/Users/yvan/solutions/javaprepare/kafka/src/main/java/com/sigom/serde/AppSerdes.java
+/Users/yvan/solutions/javaprepare/kafka/src/main/java/com/sigom/types/AdClick.java
